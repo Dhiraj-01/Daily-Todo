@@ -1,0 +1,40 @@
+###
+GET http://127.0.0.1:3000/api/todo/get/2021-03-12
+content-type: application/json
+
+###
+GET http://127.0.0.1:3000/api/todo/get/2021-03-12/1
+content-type: application/json
+
+###
+DELETE http://127.0.0.1:3000/api/todo/delete/2021-03-12/1
+content-type: application/json
+
+###
+POST http://127.0.0.1:3000/api/todo/create
+content-type: application/json
+
+{
+    "data" : {
+        "date": "2021-03-13",
+        "todo": {
+            "title": "test",
+            "description": "Wed, 21 Oct 201518:27:50 GMT"
+        }
+    }
+}
+
+###
+PUT http://127.0.0.1:3000/api/todo/update
+content-type: application/json
+
+{
+    "data" : {
+        "date": "2021-03-12",
+        "todo": {
+            "id": "2",
+            "title": "OK",
+            "description": "Wed, 21 Oct 201518:27:50 GMT"
+        }
+    }
+}

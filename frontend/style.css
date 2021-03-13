@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@350&display=swap');
+
+html, body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Roboto Slab', monospace, sans-serif;
+  font-size: 1.1rem;
+}
+.bg-light-gray {
+  background-color: rgb(241, 235, 235);
+}
+.hcenter {
+  display: flex;
+  justify-content: center;
+}
+.vcenter {
+  display: flex;
+  align-items: center;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox-round {
+  width: 1.3em;
+  height: 1.3em;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 3px solid black;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+.pointer {
+  cursor: pointer;
+}
+
+.checkbox-round:checked {
+  background-color: #3d3e3f;
+}
+
+.op-60 {
+  opacity: 60%;
+}
+.b {
+  font-weight: inherit;
+  border: 2px solid red;
+}
