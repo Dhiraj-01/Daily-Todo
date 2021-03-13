@@ -19,7 +19,7 @@
         <div>
             <div class="row">
                 <div class="col">
-                    <input type="text" id="todo-search" placeholder="Search todos ..." class="col form-control">
+                    <input type="text" id="todo-search" placeholder="Search todos ..." class="col form-control" onkeyup="filter()">
                 </div>
                 <div class="col-sm-2">
                     <input type="date" id="todo-date" class="form-control" onchange="getTodoByDate()">

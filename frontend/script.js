@@ -126,9 +126,32 @@ function addTodo() {
             }
         }
     };
+    todoEle.titleEle.value = "";
+    todoEle.descriptionEle.value = "";
+
     if(data.data.todo.title != "") {
         createTodo(urls.create, data).then(data => {
             getTodoByDate();
         });
     }
+}
+
+function filter() {
+    let query = searchEle.value;
+    query = query.toLowerCase().trim();
+    let terms = query.split(' ');
+
+    let date = todoEle.dateEle.value;
+    getTodo(`${urls.get}/${date}`).then(data => {
+        let searchData = [];
+        data.forEach(todo => {
+            terms.forEach(term => {
+                if (todo.title.toLowerCase().includes(term)) {
+                    searchData.push(todo);
+                    return;
+                }
+            });
+        });
+        generateTodos(searchData);
+    });
 }
